@@ -1,5 +1,6 @@
 import { useState } from "react";
 import words from "./wordList.json";
+import { Wrapper } from "./Styling/styled";
 
 function App() {
 
@@ -10,8 +11,9 @@ function App() {
   const [guessedLetters, setGuessedLetters] = useState<string[]>([]);
 
   return ( 
-    <div>
-    </div>
+    <Wrapper>
+      
+    </Wrapper>
   );
   
 }

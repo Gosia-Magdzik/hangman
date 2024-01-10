@@ -18,3 +18,4 @@ export const GlobalStyle = createGlobalStyle`
     background-color: #7A95C2;
   }
 `;
+
