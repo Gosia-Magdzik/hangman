@@ -4,14 +4,17 @@ import words from "./wordList.json";
 function App() {
 
   const [wordToGuess, setWordToGuess] = useState(() => {
-    words[Math.floor(Math.random() * words.length)]
+    return words[Math.floor(Math.random() * words.length)];
   });
 
-  return (
+  const [guessedLetters, setGuessedLetters] = useState<string[]>([]);
+
+  return ( 
     <h1>
-      Hi
+      Hi, coś jeszcze
     </h1>
-  )
+  );
+  
 }
 
 export default App
