@@ -10,9 +10,8 @@ function App() {
   const [guessedLetters, setGuessedLetters] = useState<string[]>([]);
 
   return ( 
-    <h1>
-      Hi, coś jeszcze
-    </h1>
+    <div>
+    </div>
   );
   
 }
