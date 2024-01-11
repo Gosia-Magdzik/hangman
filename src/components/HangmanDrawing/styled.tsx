@@ -76,18 +76,18 @@ export const RightLegStyled = styled.div`
     width: 6rem;
     height: 0.5rem;
     position: absolute;
-    top: 14.2rem;
-    right: -5.4rem;
+    top: 14.8rem;
+    right: -4.4rem;
     background-color: black;
-    transform: rotate(-2.5rad);
+    transform: rotate(-2.1rad);
 `
 
 export const LeftLegStyled = styled.div`
     width: 6rem;
     height: 0.5rem;
     position: absolute;
-    top: 14.2rem;
-    right: 0.08rem;
+    top: 14.8rem;
+    right: -1rem;
     background-color: black;
-    transform: rotate(2.5rad);
+    transform: rotate(2.1rad);
 `
