@@ -1,6 +1,12 @@
 import { useState } from "react";
 import words from "./wordList.json";
-import { Wrapper } from "./Styling/styled";
+import { MainWrapper, 
+        Wrapper,
+} from "./Styling/styled";
+import { Info } from "./components/Info";
+import { HangmanDrawing } from "./components/HangmanDrawing";
+import { HangmanWord } from "./components/HangmanWord";
+import { Keyboard } from "./components/Keyboard";
 
 function App() {
 
@@ -11,9 +17,14 @@ function App() {
   const [guessedLetters, setGuessedLetters] = useState<string[]>([]);
 
   return ( 
-    <Wrapper>
-      
-    </Wrapper>
+    <MainWrapper>
+      <Wrapper>
+        <Info/>
+        <HangmanDrawing/>
+        <HangmanWord/>
+        <Keyboard/>
+      </Wrapper>
+    </MainWrapper>
   );
   
 }
