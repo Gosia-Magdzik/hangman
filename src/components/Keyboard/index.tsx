@@ -1,4 +1,7 @@
 import React from 'react'
+import { KeyboardWrapper,
+        Button,
+} from './styled'
 
 const KEYS = [
   "a",
@@ -31,6 +34,14 @@ const KEYS = [
 
 export const Keyboard = () => {
   return (
-    <div>index</div>
+    <KeyboardWrapper>
+      {KEYS.map((key) => {
+        return (
+          <Button key={key}>
+            {key}
+          </Button>
+        )
+      })}
+    </KeyboardWrapper>
   )
 }

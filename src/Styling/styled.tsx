@@ -13,5 +13,9 @@ export const Wrapper = styled.div`
   gap: 2rem;
   align-items: center;
   justify-content: center;
-  max-width: 900px;
+  max-width: 1000px;
+`
+
+export const GridKeyboard = styled.div`
+  align-self: stretch;
 `

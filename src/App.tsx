@@ -2,6 +2,7 @@ import { useState } from "react";
 import words from "./wordList.json";
 import { MainWrapper, 
         Wrapper,
+        GridKeyboard
 } from "./Styling/styled";
 import { Info } from "./components/Info";
 import { HangmanDrawing } from "./components/HangmanDrawing";
@@ -22,7 +23,9 @@ function App() {
         <Info/>
         <HangmanDrawing/>
         <HangmanWord/>
-        <Keyboard/>
+        <GridKeyboard>
+          <Keyboard/>
+        </GridKeyboard>
       </Wrapper>
     </MainWrapper>
   );
