@@ -1,7 +1,26 @@
-import React from 'react'
+import { WordWrapper,
+        LetterStyling,
+} from './styled';
+
+const word = "test"
+const guessedLetters = ["t", "z", "e"]
 
 export const HangmanWord = () => {
   return (
-    <div>index</div>
+    <WordWrapper>
+      {word.split("").map((letter, index) => (
+        <LetterStyling key={index}>
+          <span
+            style={{
+              visibility: guessedLetters.includes(letter) 
+              ? "visible"
+              : "hidden"
+            }}
+          >
+            {letter}
+          </span>
+        </LetterStyling>
+      ))}
+    </WordWrapper>
   )
 }
