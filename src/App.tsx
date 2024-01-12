@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import words from "./wordList.json";
 import { MainWrapper, 
         Wrapper,
@@ -19,10 +19,12 @@ function App() {
 
   const incorrectLetters = guessedLetters.filter(letter => !wordToGuess.includes(letter))
 
-  function addGuessedLetter(letter: string) {
+  const addGuessedLetter = useCallback((letter: string) => {
     if(guessedLetters.includes(letter)) return
     setGuessedLetters(currentLetters => [...currentLetters, letter])
-  }
+  }, [])
+
+
 
   useEffect(() => {
     const handler = (event: KeyboardEvent) => {
