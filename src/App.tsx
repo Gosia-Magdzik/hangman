@@ -24,7 +24,7 @@ function App() {
       <Wrapper>
         <Info/>
         <HangmanDrawing numberOfGuessed={incorrectLetters.length}/>
-        <HangmanWord/>
+        <HangmanWord guessedLetters={guessedLetters} wordToGuess={wordToGuess}/>
         <GridKeyboard>
           <Keyboard/>
         </GridKeyboard>

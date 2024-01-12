@@ -19,7 +19,7 @@ const LeftArm = <LeftArmStyled/>
 const RightLeg = <RightLegStyled/>
 const LeftLeg = <LeftLegStyled/>
 
-type HangmanDrawingProps {
+type HangmanDrawingProps = {
   numberOfGuessed: number
 }
 

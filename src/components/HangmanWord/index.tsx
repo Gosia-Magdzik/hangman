@@ -2,17 +2,20 @@ import { WordWrapper,
         LetterStyling,
 } from './styled';
 
-const word = "test";
-const guessedLetter = ["t", "z"]
+type HangmanWordProps = {
+  guessedLetters: string[]
+  wordToGuess: string
+}
 
-export const HangmanWord = () => {
+export const HangmanWord = ({guessedLetters, wordToGuess}: HangmanWordProps) => {
+    
   return (
     <WordWrapper>
-      {word.split("").map((letter, index) => (
+      {wordToGuess.split("").map((letter, index) => (
         <LetterStyling key={index}>
           <span
             style={{
-              visibility: guessedLetter.includes(letter)
+              visibility: guessedLetters.includes(letter)
               ? "visible"
               : "hidden",
             }}
