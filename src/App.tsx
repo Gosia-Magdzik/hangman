@@ -39,7 +39,7 @@ function App() {
       document.removeEventListener("keypress", handler)
     }
 
-  }, [])
+  }, [guessedLetters])
 
   return ( 
     <MainWrapper>
