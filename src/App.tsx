@@ -17,11 +17,13 @@ function App() {
 
   const [guessedLetters, setGuessedLetters] = useState<string[]>([]);
 
+  const incorrectLetters = guessedLetters.filter(letter => !wordToGuess.includes(letter))
+
   return ( 
     <MainWrapper>
       <Wrapper>
         <Info/>
-        <HangmanDrawing/>
+        <HangmanDrawing numberOfGuessed={incorrectLetters.length}/>
         <HangmanWord/>
         <GridKeyboard>
           <Keyboard/>
