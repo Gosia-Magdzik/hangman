@@ -22,6 +22,6 @@ export const GridKeyboard = styled.div`
 
 export const InfoStyled = styled.p`
   font-family: 'Poppins', sans-serif;
-  color: #ffffff;
+  color: #46454a;
   font-size: 2.5rem;
 `

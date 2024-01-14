@@ -21,8 +21,11 @@ export const HangmanWord = ({
           <span
             style={{
               visibility: guessedLetters.includes(letter) || reveal
-              ? "visible"
-              : "hidden",
+                ? "visible"
+                : "hidden",
+              color: !guessedLetters.includes(letter) && reveal 
+                ? "#ce5b5b" 
+                : "black"
             }}
           >
             {letter}
