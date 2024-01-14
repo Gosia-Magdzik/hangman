@@ -5,9 +5,14 @@ import { WordWrapper,
 type HangmanWordProps = {
   guessedLetters: string[]
   wordToGuess: string
+  reveal?: boolean
 }
 
-export const HangmanWord = ({guessedLetters, wordToGuess}: HangmanWordProps) => {
+export const HangmanWord = ({
+    guessedLetters, 
+    wordToGuess,
+    reveal = false,
+  }: HangmanWordProps) => {
     
   return (
     <WordWrapper>
@@ -15,7 +20,7 @@ export const HangmanWord = ({guessedLetters, wordToGuess}: HangmanWordProps) => 
         <LetterStyling key={index}>
           <span
             style={{
-              visibility: guessedLetters.includes(letter)
+              visibility: guessedLetters.includes(letter) || reveal
               ? "visible"
               : "hidden",
             }}

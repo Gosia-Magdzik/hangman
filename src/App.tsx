@@ -53,8 +53,13 @@ function App() {
           { isWinner && "WINNER! refresh to try again" }
           { isLoser && "NICE TRY! refresh to try again " }
         </InfoStyled>
-        <HangmanDrawing numberOfGuessed={incorrectLetters.length}/>
-        <HangmanWord guessedLetters={guessedLetters} wordToGuess={wordToGuess}/>
+        <HangmanDrawing 
+          numberOfGuessed={incorrectLetters.length}/>
+        <HangmanWord 
+          guessedLetters={guessedLetters} 
+          wordToGuess={wordToGuess}
+          reveal={isLoser}
+        />
         <GridKeyboard>
           <Keyboard
             disabled={isWinner || isLoser} 
