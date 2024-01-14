@@ -16,6 +16,7 @@ export const Button = styled.button`
     text-transform: uppercase;
     cursor: pointer;
     transition: transform 0.2s;
+    border-radius: 5px;
 
     &:hover:not(:disabled), 
     :focus:not(:disabled) {
@@ -24,13 +25,15 @@ export const Button = styled.button`
     }
 
     &.active {
-        background-color: #cceaa4;
-        transform: scale(0.90);
+        background-color: #7A95C2;
+        transform: scale(1.05);
     }
 
     
     &.inactive {
-        opacity: .3;
+        opacity: .2;
+        transform: scale(.90);
+
     }
 
 
