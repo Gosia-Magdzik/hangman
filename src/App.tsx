@@ -22,7 +22,7 @@ function App() {
   const addGuessedLetter = useCallback((letter: string) => {
     if(guessedLetters.includes(letter)) return
     setGuessedLetters(currentLetters => [...currentLetters, letter])
-  }, [])
+  }, [guessedLetters])
 
 
 
@@ -50,7 +50,7 @@ function App() {
         <HangmanDrawing numberOfGuessed={incorrectLetters.length}/>
         <HangmanWord guessedLetters={guessedLetters} wordToGuess={wordToGuess}/>
         <GridKeyboard>
-          <Keyboard/>
+          <Keyboard />
         </GridKeyboard>
       </Wrapper>
     </MainWrapper>
