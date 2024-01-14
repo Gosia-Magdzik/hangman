@@ -19,3 +19,9 @@ export const Wrapper = styled.div`
 export const GridKeyboard = styled.div`
   align-self: stretch;
 `
+
+export const InfoStyled = styled.p`
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+  font-size: 2.5rem;
+`

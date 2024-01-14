@@ -2,9 +2,9 @@ import { useEffect, useState, useCallback } from "react";
 import words from "./wordList.json";
 import { MainWrapper, 
         Wrapper,
-        GridKeyboard
+        GridKeyboard,
+        InfoStyled,
 } from "./Styling/styled";
-import { Info } from "./components/Info";
 import { HangmanDrawing } from "./components/HangmanDrawing";
 import { HangmanWord } from "./components/HangmanWord";
 import { Keyboard } from "./components/Keyboard";
@@ -18,6 +18,9 @@ function App() {
   const [guessedLetters, setGuessedLetters] = useState<string[]>([]);
 
   const incorrectLetters = guessedLetters.filter(letter => !wordToGuess.includes(letter))
+
+  const isLoser = incorrectLetters.length >= 6
+  const isWinner = wordToGuess.split("").every(letter => guessedLetters.includes(letter))
 
   const addGuessedLetter = useCallback((letter: string) => {
     if(guessedLetters.includes(letter)) return
@@ -46,7 +49,10 @@ function App() {
   return ( 
     <MainWrapper>
       <Wrapper>
-        <Info/>
+        <InfoStyled>
+          { isWinner && "WINNER! refresh to try again" }
+          { isLoser && "NICE TRY! refresh to try again " }
+        </InfoStyled>
         <HangmanDrawing numberOfGuessed={incorrectLetters.length}/>
         <HangmanWord guessedLetters={guessedLetters} wordToGuess={wordToGuess}/>
         <GridKeyboard>

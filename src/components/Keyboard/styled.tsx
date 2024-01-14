@@ -31,9 +31,8 @@ export const Button = styled.button`
 
     
     &.inactive {
-        opacity: .2;
+        opacity: .5;
         transform: scale(.90);
-
     }
 
 
