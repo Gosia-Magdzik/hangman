@@ -56,7 +56,8 @@ function App() {
         <HangmanDrawing numberOfGuessed={incorrectLetters.length}/>
         <HangmanWord guessedLetters={guessedLetters} wordToGuess={wordToGuess}/>
         <GridKeyboard>
-          <Keyboard 
+          <Keyboard
+            disabled={isWinner || isLoser} 
             activeLetters={guessedLetters.filter(letter => wordToGuess.includes(letter))}
             inactiveLetters={incorrectLetters}
             addGuessedLetter={addGuessedLetter}

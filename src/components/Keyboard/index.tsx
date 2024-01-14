@@ -8,9 +8,15 @@ type KEYBOARDPROPS = {
   activeLetters: string[]
   inactiveLetters: string[]
   addGuessedLetter: (letter: string) => void
+  disabled?: boolean
 }
 
-export const Keyboard = ( { activeLetters, inactiveLetters, addGuessedLetter } : KEYBOARDPROPS ) => {
+export const Keyboard = ( { 
+      activeLetters, 
+      inactiveLetters, 
+      addGuessedLetter,
+      disabled = false
+} : KEYBOARDPROPS ) => {
   return (
     <KeyboardWrapper>
       {KEYS.map((key) => {
@@ -24,7 +30,7 @@ export const Keyboard = ( { activeLetters, inactiveLetters, addGuessedLetter } :
             onClick={() => addGuessedLetter(key)}
             className= {`${isActive ? 'active' : ""}
                         ${isInactive ? 'inactive' : ''}`}
-            disabled={ isInactive || isActive }            
+            disabled={ isInactive || isActive || disabled }            
           >
             {key}
           </Button>
