@@ -1,4 +1,3 @@
-import React from 'react'
 import { KeyboardWrapper,
         Button,
 } from './styled'
