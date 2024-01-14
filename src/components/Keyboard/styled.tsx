@@ -23,12 +23,13 @@ export const Button = styled.button`
         transform: scale(0.97);
     }
 
-    &:active {
+    &.active {
         background-color: #cceaa4;
         transform: scale(0.90);
     }
 
-    &:disabled {
+    
+    &.inactive {
         opacity: .3;
     }
 

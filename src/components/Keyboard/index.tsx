@@ -5,17 +5,27 @@ import { KeyboardWrapper,
 import { KEYS } from "./data"
 
 type KEYBOARDPROPS = {
-  activeLetter: string[]
+  activeLetters: string[]
   inactiveLetters: string[]
   addGuessedLetter: (letter: string) => void
 }
 
-export const Keyboard = ( { activeLetter, inactiveLetters, addGuessedLetter } : KEYBOARDPROPS ) => {
+export const Keyboard = ( { activeLetters, inactiveLetters, addGuessedLetter } : KEYBOARDPROPS ) => {
   return (
     <KeyboardWrapper>
       {KEYS.map((key) => {
+
+        const isActive = activeLetters.includes(key)
+        const isInactive = inactiveLetters.includes(key)
+
         return (
-          <Button key={key}>
+          <Button 
+            key={key}
+            onClick={() => addGuessedLetter(key)}
+            className= {`${isActive ? 'active' : ""}
+                        ${isInactive ? 'inactive' : ''}
+            `}
+          >
             {key}
           </Button>
         )
