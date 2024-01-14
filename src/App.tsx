@@ -50,7 +50,11 @@ function App() {
         <HangmanDrawing numberOfGuessed={incorrectLetters.length}/>
         <HangmanWord guessedLetters={guessedLetters} wordToGuess={wordToGuess}/>
         <GridKeyboard>
-          <Keyboard />
+          <Keyboard 
+            activeLetter={guessedLetters.filter(letter => wordToGuess.includes(letter))}
+            inactiveLetters={incorrectLetters}
+            addGuessedLetter={addGuessedLetter}
+          />
         </GridKeyboard>
       </Wrapper>
     </MainWrapper>
