@@ -23,8 +23,8 @@ export const Keyboard = ( { activeLetters, inactiveLetters, addGuessedLetter } :
             key={key}
             onClick={() => addGuessedLetter(key)}
             className= {`${isActive ? 'active' : ""}
-                        ${isInactive ? 'inactive' : ''}
-            `}
+                        ${isInactive ? 'inactive' : ''}`}
+            disabled={ isInactive || isActive }            
           >
             {key}
           </Button>
